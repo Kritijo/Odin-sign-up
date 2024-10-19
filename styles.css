@@ -1,0 +1,163 @@
+@font-face {
+    font-family: "odin-text";
+    src: url(./Norse-Bold.otf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.img-background{
+    position: relative;
+    color:white;
+    width: clamp(100px, 60%, 500px);
+    height: 100%;
+    background-image: url("./images/halie-west-25xggax4bSA-unsplash.jpg");
+    background-size: cover;
+}
+
+.img-background a{
+    color:white;
+}
+
+.odin-logo>div{
+    width: 25%;
+    background-image:url("./images/odin-lined.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+}
+
+.odin-logo{
+    display: flex;
+    height: 100%;
+    width:50%;
+    gap:10px;
+}
+
+.container{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: "odin-text";
+    font-size: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    top:20%;
+    padding: 10px;
+}
+
+.credit{
+    font-size: small;
+    position: relative;
+    top: 80%;
+    display: flex;
+    justify-content: center;
+    gap:5px;
+}
+
+.main{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    background-color: rgb(234, 237, 240);
+    gap:20px;
+}
+
+.main>div+form, .main>div{
+    padding: 20px 50px;
+}
+
+.hero-text, .hero-sub{
+    font-size: calc(0.5rem + 1vw);
+    font-weight: 600;
+    max-inline-size: 66ch;
+}
+
+.hero-sub{
+    margin-top: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    background-color: white;
+    box-shadow: 10px 5px 5px rgba(136, 135, 135,0.5);
+}
+
+form> :last-child{
+    padding-bottom: 16px;
+}
+
+form>div{
+    display: flex;
+    gap:20%;
+    font-size: 30px;
+}
+
+form>div>div{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    font-size: 12px;
+    color:rgb(22, 21, 21);
+    letter-spacing: 2px;
+}
+
+input{
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: calc(50% + 10vw);
+    padding: 5px 10px;
+    outline: none;
+    font-size: 18px;
+}
+
+
+input:not([type="password"]):user-invalid{
+    border-color: red;
+}
+
+input[type="password"]:user-invalid{
+    border-color: red;
+}
+
+input:focus:valid{
+    border-color: blue;
+    box-shadow: 5px 5px 5px rgba(136, 135, 135,0.2);
+}
+
+button{
+    background-color: #596D48;
+    padding: 10px 50px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight:bold;
+    color:white;
+    border: none;
+    cursor: pointer;
+}
+
+.bttn-div{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.bttn-div a{
+    color:#596D48;
+    font-weight: bold;
+    text-decoration: none;
+}
